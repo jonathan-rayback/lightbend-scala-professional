@@ -1,1 +1,6 @@
 exit
+compile
+~compile
+~compile .
+~compile
+run
