@@ -20,6 +20,8 @@ project/plugins/project/
 .history
 .cache
 .lib/
+.bsp
+.bazelbsp
 
 ### Scala ###
 *.class
