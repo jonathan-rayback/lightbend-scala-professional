@@ -10,15 +10,13 @@ lazy val hello = (project in file("."))
   .aggregate(helloCore)
   .dependsOn(helloCore)
   .settings(
-    name := "Hello"
+    name := "Hello",
+    libraryDependencies += scalaTest % Test,
   )
-
-  libraryDependencies += scalaTest % Test
 
 lazy val helloCore = (project in file("core"))
   .settings(
-    name := "Hello Core"
+    name := "Hello Core",
+    libraryDependencies ++= Seq(gigahorse, playJson, scalaTic),
+    libraryDependencies += scalaTest % Test,
   )
-
-  libraryDependencies ++= Seq(gigahorse, playJson, scalaTic) 
-  libraryDependencies += scalaTest % Test
