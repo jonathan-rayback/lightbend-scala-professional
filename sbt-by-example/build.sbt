@@ -9,6 +9,7 @@ val scalaTic = "org.scalactic" %% "scalactic" % "3.2.0"
 lazy val hello = (project in file("."))
   .aggregate(helloCore)
   .dependsOn(helloCore)
+  .enablePlugins(JavaAppPackaging)
   .settings(
     name := "Hello",
     libraryDependencies += scalaTest % Test,
