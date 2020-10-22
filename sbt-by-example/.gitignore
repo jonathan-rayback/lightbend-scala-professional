@@ -5,6 +5,7 @@
 ### Metals ###
 .metals/
 .bloop/
+.ammonite/
 project/metals.sbt
 
 ### SBT ###
