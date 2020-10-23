@@ -1,6 +1,6 @@
-initial-state
+define-a-field
 
-# Exercise 0 > Initial State
+# Exercise 4 > Define a Field
 
 In the course video recordings, the instructor uses a `man e` command in the sbt interactive session to display exercise instructions. 
 
