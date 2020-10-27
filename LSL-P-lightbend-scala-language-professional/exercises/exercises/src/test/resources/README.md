@@ -1,6 +1,6 @@
-define-a-method
+use-default-arguments
 
-# Exercise 5 > Define a Method
+# Exercise 7 > Use Default Arguments
 
 In the course video recordings, the instructor uses a `man e` command in the sbt interactive session to display exercise instructions. 
 
