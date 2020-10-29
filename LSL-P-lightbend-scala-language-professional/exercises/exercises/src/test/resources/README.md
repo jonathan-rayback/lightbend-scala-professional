@@ -1,6 +1,6 @@
-define-a-companion-object
+define-case-classes
 
-# Exercise 9 > Define a Companion Object
+# Exercise 11 > Define Case Classes
 
 In the course video recordings, the instructor uses a `man e` command in the sbt interactive session to display exercise instructions. 
 
