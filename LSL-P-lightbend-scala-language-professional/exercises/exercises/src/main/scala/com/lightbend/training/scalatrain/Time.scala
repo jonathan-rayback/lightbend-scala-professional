@@ -5,11 +5,11 @@ object Time {
   def fromMinutes (minutes : Int) : Time = {
     val hoursFromMinutes = ((minutes / 60).toInt) % 24
     val leftoverMinutes = minutes % 60
-    new Time(hoursFromMinutes, leftoverMinutes)
+    Time(hoursFromMinutes, leftoverMinutes)
   }
 }
 
-class Time (val hours : Int = 0, val minutes : Int = 0) {
+case class Time (hours : Int = 0, minutes : Int = 0) {
   require(hours <= 23 && hours >= 0, "Hours must be between 0 and 23.")
   require(minutes <= 59 && minutes >= 0, "Minutes must be between 0 and 59.")
   
