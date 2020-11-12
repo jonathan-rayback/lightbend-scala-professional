@@ -1,5 +1,8 @@
 {
   "files.watcherExclude": {
     "**/target": true
-  }
+  },
+  "metals.scalafmtConfigPath": "/Users/jrayback/src/personal/misc/scala/lightbend-scala-professional/LSL-P-lightbend-scala-language-professional/exercises/.scalafmt.conf",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true
 }
