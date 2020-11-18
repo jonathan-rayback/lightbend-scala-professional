@@ -29,14 +29,10 @@ object TestData {
   val ice724 = Train(
     "ICE",
     724,
-    Vector(ice724MunichTime -> munich, ice724NurembergTime -> nuremberg, ice724CologneTime -> cologne)
-  )
+    Vector(ice724MunichTime -> munich, ice724NurembergTime -> nuremberg, ice724CologneTime -> cologne))
 
-  val ice726 = Train(
-    "ICE",
-    722,
-    Vector(ice726MunichTime -> munich, ice726NurembergTime -> nuremberg, ice726CologneTime -> essen)
-  )
+  val ice726 =
+    Train("ICE", 722, Vector(ice726MunichTime -> munich, ice726NurembergTime -> nuremberg, ice726CologneTime -> essen))
 
   val planner = new JourneyPlanner(Set(ice724, ice726))
 }
