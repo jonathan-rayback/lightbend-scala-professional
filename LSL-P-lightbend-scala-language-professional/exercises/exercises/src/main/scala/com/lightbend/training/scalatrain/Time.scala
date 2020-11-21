@@ -10,7 +10,7 @@ object Time {
   }
 }
 
-case class Time(hours: Int = 0, minutes: Int = 0) {
+case class Time(hours: Int = 0, minutes: Int = 0) extends Ordered[Time] {
   require(hours <= 23 && hours >= 0, "Hours must be between 0 and 23.")
   require(minutes <= 59 && minutes >= 0, "Minutes must be between 0 and 59.")
 
@@ -21,6 +21,7 @@ case class Time(hours: Int = 0, minutes: Int = 0) {
   // define infix operator
   def -(that: Time): Int = minus(that)
 
-  // override
   override def toString: String = f"$hours%02d:$minutes%02d"
+
+  override def compare(that: Time): Int = this - that
 }
