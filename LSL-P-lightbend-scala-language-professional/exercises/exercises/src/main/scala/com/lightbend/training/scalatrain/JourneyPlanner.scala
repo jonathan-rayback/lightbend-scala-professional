@@ -11,4 +11,17 @@ class JourneyPlanner(val trains: Set[Train]) {
     stop <- train.schedule if stop._2 == station
   } yield (stop._1, train)
 
+  // def isShortTripF(from: Station, to: Station): Boolean = {
+  //   trains.exists(train => train.stations.dropWhile(station => station != from).drop(1).take(2).contains(to))
+  // }
+
+  def isShortTrip(from: Station, to: Station): Boolean = {
+    trains.exists(train =>
+      train.stations.dropWhile(station => station != from) match {
+        case `from` +: `to` +: _      => true
+        case `from` +: _ +: `to` +: _ => true
+        case _                        => false
+      })
+  }
+
 }
