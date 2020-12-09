@@ -16,12 +16,11 @@ class JourneyPlanner(val trains: Set[Train]) {
   // }
 
   def isShortTrip(from: Station, to: Station): Boolean = {
-    trains.exists(train =>
-      train.stations.dropWhile(station => station != from) match {
-        case `from` +: `to` +: _      => true
-        case `from` +: _ +: `to` +: _ => true
-        case _                        => false
-      })
+    trains.exists(_.stations.dropWhile(station => station != from) match {
+      case `from` +: `to` +: _      => true
+      case `from` +: _ +: `to` +: _ => true
+      case _                        => false
+    })
   }
 
 }
