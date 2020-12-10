@@ -36,7 +36,7 @@ class TimeSpec extends AnyWordSpec with Matchers {
 
   "Calling minus or -" should {
     "return the correct difference in minutes" in {
-      Time(1, 40).minus(Time(1, 10)) shouldEqual 30
+      Time(1, 40) minus Time(1, 10) shouldEqual 30
       Time(1, 40) - Time(1, 10) shouldEqual 30
     }
   }

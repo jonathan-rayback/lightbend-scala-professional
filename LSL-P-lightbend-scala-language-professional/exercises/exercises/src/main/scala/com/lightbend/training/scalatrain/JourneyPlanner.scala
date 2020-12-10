@@ -8,8 +8,8 @@ class JourneyPlanner(val trains: Set[Train]) {
 
   def stopsAt(station: Station): Set[(Time, Train)] = for {
     train <- trainsAt(station)
-    stop <- train.schedule if stop._2 == station
-  } yield (stop._1, train)
+    (time, candidateStation) <- train.schedule if candidateStation == station
+  } yield (time, train)
 
   // def isShortTripF(from: Station, to: Station): Boolean = {
   //   trains.exists(train => train.stations.dropWhile(station => station != from).drop(1).take(2).contains(to))
