@@ -13,5 +13,13 @@ case class BavarianRegional(number: Int) extends TrainInfo
 case class Train(info: TrainInfo, schedule: Seq[(Time, Station)]) {
   require(schedule.length >= 2, "Must have at least two stations in the schedule for this train.")
   val stations: Seq[Station] = schedule.map(_._2)
-
+  def timeAt(station: Station): Option[Time] = {
+    schedule
+      .find { case (_, candidateStation) =>
+        candidateStation == station
+      }
+      .map { case (time, _) =>
+        time
+      }
+  }
 }

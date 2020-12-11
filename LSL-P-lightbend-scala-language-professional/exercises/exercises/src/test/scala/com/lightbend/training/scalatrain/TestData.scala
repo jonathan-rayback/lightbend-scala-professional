@@ -38,9 +38,7 @@ object TestData {
       ice724MunichTime -> munich,
       ice724NurembergTime -> nuremberg,
       ice724FrankfurtTime -> frankfurt,
-      ice724CologneTime -> cologne
-    )
-  )
+      ice724CologneTime -> cologne))
 
   val ice726 = Train(
     InterCityExpress(726),
@@ -48,9 +46,7 @@ object TestData {
       ice726MunichTime -> munich,
       ice726NurembergTime -> nuremberg,
       ice726FrankfurtTime -> frankfurt,
-      ice726CologneTime -> essen
-    )
-  )
+      ice726CologneTime -> essen))
 
   val planner = new JourneyPlanner(Set(ice724, ice726))
 }
