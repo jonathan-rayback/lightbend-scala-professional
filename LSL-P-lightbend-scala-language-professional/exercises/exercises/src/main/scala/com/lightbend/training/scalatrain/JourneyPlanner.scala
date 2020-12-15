@@ -6,11 +6,6 @@ class JourneyPlanner(val trains: Set[Train]) {
 
   def trainsAt(station: Station): Set[Train] = trains.filter(_.stations.contains(station))
 
-  def stopsAtOLD(station: Station): Set[(Time, Train)] = for {
-    train <- trainsAt(station)
-    (time, candidateStation) <- train.schedule if candidateStation == station
-  } yield (time, train)
-
   def stopsAt(station: Station): Set[(Time, Train)] = for {
     train <- trainsAt(station)
     time <- train.timeAt(station)
